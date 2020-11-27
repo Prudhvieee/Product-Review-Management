@@ -33,6 +33,9 @@ namespace Product_Review_Management
 
             Console.WriteLine("\n Ratings greater than three of specific products: ");
             product.RatingsGreaterThanThreeOfSpecificProducts(productReviewList);
+
+            Console.WriteLine("\n Review count for each product Id.");
+            product.GetReviewsCount(productReviewList);
         }
     }
 }
