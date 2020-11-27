@@ -30,6 +30,9 @@ namespace Product_Review_Management
             Console.WriteLine("\n Top 3 rated products.");
             ProductReviewManagement product = new ProductReviewManagement();
             product.TopRecords(productReviewList);
+
+            Console.WriteLine("\n Ratings greater than three of specific products: ");
+            product.RatingsGreaterThanThreeOfSpecificProducts(productReviewList);
         }
     }
 }
