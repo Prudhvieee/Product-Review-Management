@@ -36,6 +36,9 @@ namespace Product_Review_Management
 
             Console.WriteLine("\n Review count for each product Id.");
             product.GetReviewsCount(productReviewList);
+
+            Console.WriteLine("\nProduct id and reviews from the list");
+            product.GetProductIdAndReview(productReviewList);
         }
     }
 }
