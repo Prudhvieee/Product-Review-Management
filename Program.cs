@@ -39,6 +39,9 @@ namespace Product_Review_Management
 
             Console.WriteLine("\nProduct id and reviews from the list");
             product.GetProductIdAndReview(productReviewList);
+
+            Console.WriteLine("\nSkiping top 5 records.");
+            product.SkipTopFiveRecords(productReviewList);
         }
     }
 }
