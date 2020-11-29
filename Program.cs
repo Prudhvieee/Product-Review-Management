@@ -49,11 +49,14 @@ namespace Product_Review_Management
             product.InsertValuesIntoDataTable(productReviewList);
             Console.WriteLine("\nData inserted into data table");
 
-            Console.WriteLine("*********Records Where Is Like Is True***********");
+            Console.WriteLine("\n*********Records Where Is Like Is True***********");
             product.GetRecordsWithIsLikeTrue();
 
-            Console.WriteLine("Average rating");
+            Console.WriteLine("\nAverage rating");
             product.GetAverageRating();
+
+            Console.WriteLine("\nProducts with review NICE");
+            product.GetProductWithReviewNice();
         }
     }
 }
