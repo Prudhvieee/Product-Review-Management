@@ -45,6 +45,9 @@ namespace Product_Review_Management
 
             Console.WriteLine("\nSelectProductIdAndReviews");
             product.SelectProductIDAndReviews(productReviewList);
+
+            product.InsertValuesIntoDataTable(productReviewList);
+            Console.WriteLine("\nData inserted into data table");
         }
     }
 }

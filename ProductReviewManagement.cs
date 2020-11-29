@@ -8,6 +8,7 @@ namespace Product_Review_Management
 {
     public class ProductReviewManagement
     {
+        public readonly DataTable dataTable = new DataTable();
         public void TopRecords(List<ProductReview> listProductReview)
         {
             var recordedData = (from productReviews in listProductReview
@@ -66,6 +67,30 @@ namespace Product_Review_Management
             {
                 Console.WriteLine("Product ID: " + list.ProductID + " " + "Review: " + list.Review);
             }
+        }
+        public void InsertValuesIntoDataTable(List<ProductReview> listProductReview)
+        {
+            dataTable.Columns.Add("ProductID", typeof(int));
+            dataTable.Columns.Add("UserID", typeof(int));
+            dataTable.Columns.Add("Rating", typeof(double));
+            dataTable.Columns.Add("Review");
+            dataTable.Columns.Add("isLike", typeof(bool));
+
+            dataTable.Rows.Add(1, 1, 3, "Nice", true);
+            dataTable.Rows.Add(1, 2, 5, "Good", true);
+            dataTable.Rows.Add(2, 1, 1, "Bad", false);
+            dataTable.Rows.Add(4, 3, 3, "Nice", true);
+            dataTable.Rows.Add(3, 4, 2, "Bad", false);
+            dataTable.Rows.Add(5, 1, 5, "Good", true);
+            dataTable.Rows.Add(6, 5, 3, "Nice", true);
+            dataTable.Rows.Add(2, 6, 5, "Good", true);
+            dataTable.Rows.Add(8, 5, 2, "Bad", false);
+            dataTable.Rows.Add(6, 7, 3, "Nice", true);
+            dataTable.Rows.Add(7, 6, 5, "Good", true);
+            dataTable.Rows.Add(9, 9, 3, "Nice", true);
+            dataTable.Rows.Add(10, 8, 4, "Good", true);
+            dataTable.Rows.Add(9, 10, 1, "Bad", false);
+            dataTable.Rows.Add(11, 11, 5, "Good", true);
         }
     }
 }
