@@ -51,6 +51,9 @@ namespace Product_Review_Management
 
             Console.WriteLine("*********Records Where Is Like Is True***********");
             product.GetRecordsWithIsLikeTrue();
+
+            Console.WriteLine("Average rating");
+            product.GetAverageRating();
         }
     }
 }

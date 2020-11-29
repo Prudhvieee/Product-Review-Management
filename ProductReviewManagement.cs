@@ -105,5 +105,15 @@ namespace Product_Review_Management
                     + "isLike : " + product.Field<bool>("isLike"));
             }
         }
+        public void GetAverageRating()
+        {
+            var recordedData = dataTable.AsEnumerable().GroupBy(e => e.Field<int>("ProductID")).Select
+                               (x => new { ProductID = x.Key, Average = x.Average(y => y.Field<double>("Rating")) });
+
+            foreach (var list in recordedData)
+            {
+                Console.WriteLine(list.ProductID + ": " + list.Average);
+            }
+        }
     }
 }
